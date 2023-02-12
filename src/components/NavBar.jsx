@@ -24,6 +24,16 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
+
+const ButtonBlue = styled.button`
+
+  padding: 10px;
+  background-color: blue;
+  color: gray;
+  cursor: pointer;
+  font-weight: 600;
+`;
+
 const NavBar = () => {
   return (
     <div className="Container">
@@ -34,10 +44,15 @@ const NavBar = () => {
        
         </div>
         <div className="Right">
-          <div className="Badage"> </div>
+        
           <Link to={`/register/`}>
        
               <Button>Login</Button>
+       
+          </Link>
+          <Link to={`/list/`}>
+       
+              <ButtonBlue>Review</ButtonBlue>
        
           </Link>
         </div>

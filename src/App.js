@@ -4,6 +4,7 @@ import React from 'react'
 import ProductList from "./components/Products"
 import Register from "./components/Register"
 import Cart from "./components/Cart"
+import List from "./components/List"
 
 
 import {
@@ -14,14 +15,6 @@ import {
 } from "react-router-dom";
 // import Success from "./pages/Success";
 import { useSelector } from "react-redux";
-
-
-
-
-
-
-
-
 
 
 
@@ -45,6 +38,10 @@ return(
 
 <Route path="/register">
  <Register/>
+</Route>
+
+<Route path="/list">
+ <List/>
 </Route>
 
 </Router>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useState, useEffect} from "react";
+import {useState,} from "react";
 import axios from "axios";
 // import { mobile } from "../responsive";
 
@@ -83,17 +83,20 @@ const Register = () => {
 const handleChange = (event) =>{
   const name = event.target.name;
   const value = event.target.value;
-  setCount( values => ({...values, [name]: value }))
 
-
+  console.log(name)
+  setCount( values => ({...values, [name]: value}))
+  console.log(name)
 }
 
 
 const handleSubmit = (event) =>{
   event.preventDefault();
   axios.post("http://localhost:8888/api/user/save", count)
-  console.log(count)
-  
+  .then(function(response){
+  console.log(response.data)
+  })
+   console.log(count)
 }
 
 
@@ -102,12 +105,9 @@ const handleSubmit = (event) =>{
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
         <Form onSubmit={handleSubmit}>
-          <Input type="text" name="first name" placeholder="first name" onChange={handleChange}/>
-          <Input type="text" name="last name" placeholder="last name" onChange={handleChange}/>
-          <Input type="text" name="username" placeholder="username"onChange={handleChange}/>
+          <Input type="text" name="name" placeholder="name" onChange={handleChange}/>
           <Input type="text" name="email" placeholder="email" onChange={handleChange}/>
-          <Input type="text" name="password" placeholder="password" onChange={handleChange}/>
-          <Input type="text" name="confirm password"   placeholder="confirm password" onChange={handleChange} />
+          {/* <Input type="number" name="number" placeholder="mobile Number"onChange={handleChange}/> */}
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
