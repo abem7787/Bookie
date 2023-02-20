@@ -95,11 +95,13 @@ const handleSubmit = (event) =>{
   axios.post("http://localhost:8888/api/user/save", count)
   .then(function(response){
   console.log(response.data)
+  console.log(typeof response.data);
+
   })
-   console.log(count)
 }
 
 
+console.log(count)
   return (
     <Container>
       <Wrapper>

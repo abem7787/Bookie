@@ -4,7 +4,8 @@ import React from 'react'
 import ProductList from "./components/Products"
 import Register from "./components/Register"
 import Cart from "./components/Cart"
-import List from "./components/List"
+import Lists from "./components/List"
+import Edit from "./components/Edit"
 
 
 import {
@@ -36,13 +37,16 @@ return(
  <Cart/>
 </Route>
 
+<Route path="/list">
+ <Lists/>
+</Route>
 <Route path="/register">
  <Register/>
 </Route>
-
-<Route path="/list">
- <List/>
+<Route path="/edit">
+ <Edit/>
 </Route>
+
 
 </Router>
 </Switch>
