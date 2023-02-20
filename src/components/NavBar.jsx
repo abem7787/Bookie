@@ -13,10 +13,7 @@ import MailIcon from "@mui/icons-material/Mail";
 // background-color: black;
 // `
 
-
-
 const Button = styled.button`
-
   padding: 10px;
   background-color: red;
   color: gray;
@@ -24,11 +21,16 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
-
 const ButtonBlue = styled.button`
-
   padding: 10px;
   background-color: blue;
+  color: gray;
+  cursor: pointer;
+  font-weight: 600;
+`;
+const ButtonGreen = styled.button`
+  padding: 10px;
+  background-color: green;
   color: gray;
   cursor: pointer;
   font-weight: 600;
@@ -41,19 +43,16 @@ const NavBar = () => {
         <div className="Left"></div>
         <div className="Center">
           <div className="Logo"> Party Zone Rentals </div>
-       
         </div>
         <div className="Right">
-        
           <Link to={`/register/`}>
-       
-              <Button>Login</Button>
-       
+            <Button>Login</Button>
           </Link>
           <Link to={`/list/`}>
-       
-              <ButtonBlue>Review</ButtonBlue>
-       
+            <ButtonBlue>Review</ButtonBlue>
+          </Link>
+          <Link to={`/edit/`}>
+            <ButtonGreen>Edit</ButtonGreen>
           </Link>
         </div>
       </div>
